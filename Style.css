@@ -1,0 +1,157 @@
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  overflow: hidden;
+  margin: 20px;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #ecf2f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #2d2d2d;
+}
+
+.card-text {
+  font-size: 15px;
+  color: #6c7a89;
+  margin-bottom: 20px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.author-name {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.author-date {
+  font-size: 12px;
+  color: #888;
+  margin: 0;
+}
+
+.share {
+  position: relative;
+}
+
+.share-btn {
+  background: #ecf2f8;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c7a89;
+  font-size: 16px;
+}
+
+.share-menu {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  background: #48556a;
+  padding: 10px 16px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+}
+
+.share-menu::after {
+  content: "";
+  position: absolute;
+  bottom: -19px;
+  right: 10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #48556a transparent transparent transparent;
+}
+
+.share-label {
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-right: 8px;
+  color: #9daec2;
+}
+
+.share-menu a {
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .card {
+    grid-template-columns: 1fr; /* картинка зверху */
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    grid-template-columns: 1fr; /* теж одна колонка */
+    max-width: 95%;
+  }
+}
